@@ -1,0 +1,16 @@
+<%= form_with url: static_pages_path, method: :get do |form|  %>
+  <%= form.text_field :user_id %>
+  <%= form.submit "Look for photos" %>
+<% end %>
+
+<% if @photo_urls %>
+  <div class="photos">
+    <% @photo_urls.each do |photo|  %>
+      <%= link_to photo[:url_photopage] do %>
+        <%= image_tag photo[:url] %>
+      <% end %>
+    <% end %>
+    <%=  %>
+  </div>
+<% end %>
+
