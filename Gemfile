@@ -78,5 +78,4 @@ end
 gem "flickr"
 gem "figjam"
 gem "rubocop-rails", require: false
-
-gem "tailwindcss-rails", "~> 2.0"
+gem "cssbundling-rails", "~> 1.1"
