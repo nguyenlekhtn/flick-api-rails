@@ -1,16 +1,24 @@
-<%= form_with url: static_pages_path, method: :get do |form|  %>
-  <%= form.text_field :user_id %>
-  <%= form.submit "Look for photos" %>
-<% end %>
-
-<% if @photo_urls %>
-  <div class="photos">
-    <% @photo_urls.each do |photo|  %>
-      <%= link_to photo[:url_photopage] do %>
-        <%= image_tag photo[:url] %>
-      <% end %>
+<div class="bg-white pt-8">
+  <div class="max-w-2xl mx-auto">
+    <%= form_with url: static_pages_path, method: :get, html: { class: "flex flex-col items-center gap-y-6"} do |form|  %>
+      <%= form.text_field :user_id, class: "w-full rounded-lg px-8 py-4 focus:border-none focus:ring focus:ring-blue-500", placeholder: "191340088@N06" %>
+      <%= form.submit "Look for photos", class: "bg-orange-500 hover:bg-orange-700 rounded-full font-medium px-8 py-4 text-white" %>
     <% end %>
-    <%=  %>
   </div>
-<% end %>
+</div>
+
+<div class="bg-white pt-12">
+  <div class="container mx-auto">
+    <% if @photo_urls %>
+      <div class="grid grid-flow-col auto-cols-max>
+        <% @photo_urls.each do |photo|  %>
+          <%= link_to photo[:url_photopage], class: "max-w-md" do %>
+            <%= image_tag photo[:url] %>
+          <% end %>
+        <% end %>
+        <%=  %>
+      </div>
+    <% end %>
+  </div>
+<div class="container mx-auto">
 
