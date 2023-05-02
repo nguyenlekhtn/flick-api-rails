@@ -10,9 +10,9 @@
 <div class="bg-white pt-12">
   <div class="container mx-auto">
     <% if @photo_urls %>
-      <div class="grid grid-flow-col auto-cols-max>
+      <div class="flex flex-wrap justify-center">
         <% @photo_urls.each do |photo|  %>
-          <%= link_to photo[:url_photopage], class: "max-w-md" do %>
+          <%= link_to photo[:url_photopage], class: "shrink" do %>
             <%= image_tag photo[:url] %>
           <% end %>
         <% end %>
