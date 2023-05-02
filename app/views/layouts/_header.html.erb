@@ -6,9 +6,8 @@
       </div>
       <div class="ml-6 flex items-center">
         <div class="flex gap-2">
-          <a href="" class="text-sm border-transparent text-gray-500 inline-flex items-center px-1 font-medium">Home</a>
-          <a href="" class="text-sm border-transparent text-gray-500 inline-flex items-center px-1 font-medium">Photos</a>
-          <a href="" class="text-sm border-transparent text-gray-500 inline-flex items-center px-1 font-medium">About</a>
+          <%= link_to "Home", root_path, class: "text-sm border-transparent text-gray-500 inline-flex items-center px-1 font-medium" %>
+          <%= link_to "My photos", "/static_pages?user_id=191340088%40N06", class: "text-sm border-transparent text-gray-500 inline-flex items-center px-1 font-medium" %>
         </div>
       </div>
     </div>
